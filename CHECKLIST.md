@@ -38,10 +38,10 @@ Each commit follows **Red → Green → Refactor** TDD:
 
 #### 1.2.3 `feat(backend): CORS config`
 
-- [ ] 🔴 `test_cors_allows_frontend_origin` — OPTIONS to `/health` with `Origin: http://localhost:5173`, assert `Access-Control-Allow-Origin` in response
-- [ ] 🔴 `test_cors_rejects_unknown_origin` — same with unknown origin, assert it's not echoed back
-- [ ] 🟢 Add CORS middleware, load allowed origins from env var
-- [ ] 🔵 Ensure origins are config-driven, never hardcoded
+- [x] 🔴 `test_cors_allows_frontend_origin` — OPTIONS to `/health` with `Origin: http://localhost:5173`, assert `Access-Control-Allow-Origin` in response
+- [x] 🔴 `test_cors_rejects_unknown_origin` — same with unknown origin, assert it's not echoed back
+- [x] 🟢 Add CORS middleware, load allowed origins from env var
+- [x] 🔵 Ensure origins are config-driven, never hardcoded
 
 #### 1.2.4 `feat(backend): GET /health endpoint`
 
