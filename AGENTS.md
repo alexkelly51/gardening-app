@@ -40,7 +40,7 @@ See [CHECKLIST.md](CHECKLIST.md) for granular step-by-step progress.
 - Package manager: **uv** — use `uv add` to add deps, never edit `pyproject.toml` deps manually
 - Virtual env is at `backend/.venv` — activate with `source backend/.venv/bin/activate`
 - Run backend: `cd backend && uvicorn main:app --reload`
-- Run tests: `cd backend && pytest`
+- Run tests: `make test` from repo root
 
 ---
 

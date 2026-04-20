@@ -85,6 +85,8 @@ When starting a new checklist item, the first thing we do is break it into sub-s
 
 **Never commit without explicit confirmation.** After completing a step, present the changes for review and wait for the user to say "commit" before running any git commit command.
 
+**Always tick checkboxes before committing.** Before each commit, ensure all 🔴/🟢/🔵 checkboxes for that sub-step are ticked in CHECKLIST.md.
+
 ---
 
 ### Phase 1 — Foundation
