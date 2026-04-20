@@ -83,6 +83,8 @@ Each checklist item (e.g. 1.2) is broken down into atomic commits before work st
 
 When starting a new checklist item, the first thing we do is break it into sub-steps in the checklist with explicit test names before writing any code.
 
+**Code standards:** See [docs/python-style.md](docs/python-style.md) for Python conventions.
+
 **Never commit without explicit confirmation.** After completing a step, present the changes for review and wait for the user to say "commit" before running any git commit command.
 
 **Always tick checkboxes before committing.** Before each commit, ensure all 🔴/🟢/🔵 checkboxes for that sub-step are ticked in CHECKLIST.md.

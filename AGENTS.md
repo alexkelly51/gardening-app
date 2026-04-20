@@ -34,6 +34,13 @@ See [CHECKLIST.md](CHECKLIST.md) for granular step-by-step progress.
 
 ---
 
+## Code Standards
+
+- **Python** — see [docs/python-style.md](docs/python-style.md)
+- **TypeScript** — see [docs/typescript-style.md](docs/typescript-style.md) _(to be added when frontend work begins)_
+
+---
+
 ## Python / Backend
 
 - Python version: **3.13.11**, managed via **pyenv** (`.python-version` in `/backend`)

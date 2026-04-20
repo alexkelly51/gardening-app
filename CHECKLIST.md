@@ -45,10 +45,10 @@ Each commit follows **Red → Green → Refactor** TDD:
 
 #### 1.2.4 `feat(backend): GET /health endpoint`
 
-- [ ] 🔴 `test_health_returns_200` — GET `/health`, assert status 200
-- [ ] 🔴 `test_health_returns_ok_body` — GET `/health`, assert body is `{"status": "ok"}`
-- [ ] 🟢 Add `/health` endpoint returning `{"status": "ok"}`
-- [ ] 🔵 Confirm response model is typed (not a bare dict)
+- [x] 🔴 `test_health_returns_200` — GET `/health`, assert status 200
+- [x] 🔴 `test_health_returns_ok_body` — GET `/health`, assert body is `{"status": "ok"}`
+- [x] 🟢 Add `/health` endpoint returning `{"status": "ok"}`
+- [x] 🔵 Confirm response model is typed (not a bare dict)
 
 ### 1.3 `feat(frontend): Vite + React + TypeScript scaffold`
 
