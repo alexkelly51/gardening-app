@@ -75,9 +75,9 @@ Each commit follows **Red → Green → Refactor** TDD:
 - [x] 🔵 Confirm unused classes are stripped in prod (check `content` paths in config)
 
 #### 1.4.3 `chore(frontend): init shadcn/ui with green theme`
-- [ ] 🔴 N/A — config only
-- [ ] 🟢 Run `shadcn init`, set green-based theme colours
-- [ ] 🔵 Confirm a shadcn component imports and renders correctly
+- [x] 🔴 N/A — config only
+- [x] 🟢 Run `shadcn init`, set green-based theme colours
+- [x] 🔵 Confirm a shadcn component imports and renders correctly
 
 ### 1.5 `feat(frontend): connect to backend health check`
 
