@@ -10,14 +10,38 @@ Each commit follows **Red → Green → Refactor** TDD:
 ## Phase 1 — Foundation
 
 ### 1.1 `chore: remove old CRA app, scaffold project structure`
-- [ ] 🔴 N/A (no logic to test — structural only)
-- [ ] 🟢 Delete src/, public/, package.json, package-lock.json. Create /backend and /frontend folders with placeholder READMEs
-- [ ] 🔵 Confirm folder structure matches plan
+- [x] 🔴 N/A (no logic to test — structural only)
+- [x] 🟢 Delete src/, public/, package.json, package-lock.json. Create /backend and /frontend folders with placeholder READMEs
+- [x] 🔵 Confirm folder structure matches plan
 
 ### 1.2 `feat(backend): FastAPI app skeleton with health check`
-- [ ] 🔴 Write test: `GET /health` returns `{"status": "ok"}` with 200
-- [ ] 🟢 Create `main.py`, `requirements.txt`, CORS config, `/health` endpoint
-- [ ] 🔵 Ensure CORS origins are config-driven not hardcoded
+
+#### 1.2.1 `chore(backend): add pyproject.toml`
+> **Decisions made:**
+> - ~~`requirements.txt`~~ — switched to `uv` + `pyproject.toml` as the modern standard
+> - Python **3.13.11** chosen (latest stable as of Apr 2026); installed via **pyenv** to keep versions isolated per project; set via `.python-version` file in `/backend`
+> - `uv` manages the venv and lockfile (`uv.lock`)
+
+- [ ] 🔴 N/A — no logic to test
+- [x] 🟢 Run `uv init` + `uv add fastapi uvicorn pytest httpx`; set Python 3.13.11 via `pyenv local`; update `requires-python = ">=3.13"` in pyproject.toml; remove placeholder `main.py` from uv init
+- [ ] 🔵 Confirm `requires-python` is set correctly and `.python-version` is committed
+
+#### 1.2.2 `feat(backend): FastAPI app entry point`
+- [ ] 🔴 `test_app_exists` — import `app` from `main`, assert it's a FastAPI instance
+- [ ] 🟢 Create `main.py` with bare FastAPI app instantiation
+- [ ] 🔵 Confirm app is importable with no side effects
+
+#### 1.2.3 `feat(backend): CORS config`
+- [ ] 🔴 `test_cors_allows_frontend_origin` — OPTIONS to `/health` with `Origin: http://localhost:5173`, assert `Access-Control-Allow-Origin` in response
+- [ ] 🔴 `test_cors_rejects_unknown_origin` — same with unknown origin, assert it's not echoed back
+- [ ] 🟢 Add CORS middleware, load allowed origins from env var
+- [ ] 🔵 Ensure origins are config-driven, never hardcoded
+
+#### 1.2.4 `feat(backend): GET /health endpoint`
+- [ ] 🔴 `test_health_returns_200` — GET `/health`, assert status 200
+- [ ] 🔴 `test_health_returns_ok_body` — GET `/health`, assert body is `{"status": "ok"}`
+- [ ] 🟢 Add `/health` endpoint returning `{"status": "ok"}`
+- [ ] 🔵 Confirm response model is typed (not a bare dict)
 
 ### 1.3 `feat(frontend): Vite + React + TypeScript scaffold`
 - [ ] 🔴 Write test: App component renders without crashing
