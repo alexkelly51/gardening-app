@@ -58,9 +58,9 @@ Each commit follows **Red → Green → Refactor** TDD:
 - [x] 🔵 Confirm it builds and dev server starts
 
 #### 1.3.2 `feat(frontend): App component renders without crash`
-- [ ] 🔴 `test_app_renders` — render `<App />`, assert it mounts without error
-- [ ] 🟢 Minimal `App.tsx` — remove all Vite boilerplate
-- [ ] 🔵 Remove default Vite CSS, counter component, assets
+- [x] 🔴 `test_app_renders` — render `<App />`, assert it mounts without error
+- [x] 🟢 Minimal `App.tsx` — remove all Vite boilerplate
+- [x] 🔵 Remove default Vite CSS, counter component, assets
 
 ### 1.4 `feat(frontend): add Tailwind CSS and shadcn/ui`
 
