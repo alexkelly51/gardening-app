@@ -70,9 +70,9 @@ Each commit follows **Red → Green → Refactor** TDD:
 - [x] 🔵 Confirm build passes with Tailwind classes
 
 #### 1.4.2 `feat(frontend): verify Tailwind renders correctly`
-- [ ] 🔴 `test_tailwind_class_applied` — render a component with a Tailwind class, assert the element is in the document
-- [ ] 🟢 Add a simple styled element to `App.tsx`
-- [ ] 🔵 Confirm unused classes are stripped in prod (check `content` paths in config)
+- [x] 🔴 `test_tailwind_class_applied` — render a component with a Tailwind class, assert the element is in the document
+- [x] 🟢 Add a simple styled element to `App.tsx`
+- [x] 🔵 Confirm unused classes are stripped in prod (check `content` paths in config)
 
 #### 1.4.3 `chore(frontend): init shadcn/ui with green theme`
 - [ ] 🔴 N/A — config only
