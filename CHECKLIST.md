@@ -52,9 +52,15 @@ Each commit follows **Red → Green → Refactor** TDD:
 
 ### 1.3 `feat(frontend): Vite + React + TypeScript scaffold`
 
-- [ ] 🔴 Write test: App component renders without crashing
-- [ ] 🟢 Scaffold Vite app in /frontend with React + TypeScript template
-- [ ] 🔵 Remove boilerplate (default Vite CSS, counter component etc.)
+#### 1.3.1 `chore(frontend): scaffold Vite + React + TypeScript app`
+- [x] 🔴 N/A — structural only
+- [x] 🟢 Run `npm create vite@latest` in `/frontend` with React + TypeScript template
+- [x] 🔵 Confirm it builds and dev server starts
+
+#### 1.3.2 `feat(frontend): App component renders without crash`
+- [x] 🔴 `test_app_renders` — render `<App />`, assert it mounts without error
+- [x] 🟢 Minimal `App.tsx` — remove all Vite boilerplate
+- [x] 🔵 Remove default Vite CSS, counter component, assets
 
 ### 1.4 `feat(frontend): add Tailwind CSS and shadcn/ui`
 
