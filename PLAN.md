@@ -109,14 +109,23 @@ When starting a new checklist item, the first thing we do is break it into sub-s
 
 ### Phase 2 — Google Sheets Integration
 
-**Goal:** Backend reads from and writes to Google Sheets. Dummy data in place for QA.
+**Goal:** Backend reads from and writes to a real Google Sheet. We use a small test sheet to build against the real data shape from day one — so nothing needs changing when you point it at the full sheet later.
+
+#### Step-by-step Google Cloud setup (do once before coding starts)
+
+1. **Create the Google Sheet** — 3 tabs: `Plants`, `CareTasks`, `TaskLog` with column headers matching the data model above. Add a handful of real plants and care tasks.
+2. **Create a Google Cloud project** — go to [console.cloud.google.com](https://console.cloud.google.com)
+3. **Enable the Google Sheets API** — search for "Sheets API" in the project and enable it
+4. **Create a service account** — IAM & Admin → Service Accounts → Create. Download the JSON key file.
+5. **Share the sheet** — share it with the service account email (`name@project.iam.gserviceaccount.com`) with Editor access
+6. **Add credentials to `.env`** — `GOOGLE_SHEETS_KEY_PATH` (path to JSON key) and `GOOGLE_SHEET_ID` (from the sheet URL)
 
 | #   | Commit                                         | What                                                                            |
 | --- | ---------------------------------------------- | ------------------------------------------------------------------------------- |
-| 2.1 | `feat(backend): Google Sheets client setup`    | `gspread` + service account auth, sheet connection helper, env var for sheet ID |
+| 2.1 | `feat(backend): Google Sheets client setup`    | `gspread` + service account auth, sheet connection helper, env vars for sheet ID + key path |
 | 2.2 | `feat(backend): Python data models (Pydantic)` | `Plant`, `CareTask`, `TaskLog` models for type safety — no DB, just shapes      |
 | 2.3 | `feat(backend): Sheets read layer`             | Functions to fetch and parse each tab into typed Python objects                 |
-| 2.4 | `feat(backend): dummy data in Google Sheet`    | 6 plants, varied care tasks, TaskLog tab — ready for QA                         |
+| 2.4 | `feat(backend): populate test Google Sheet`    | Add real plants + care tasks to the test sheet; verify read layer parses cleanly |
 | 2.5 | `feat(backend): Sheets write layer`            | Function to append a row to TaskLog tab                                         |
 
 **Tests:** parse valid sheet rows · handle missing optional fields · write appends correct row
