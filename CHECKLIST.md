@@ -87,10 +87,10 @@ Each commit follows **Red → Green → Refactor** TDD:
 - [x] 🔵 Ensure all future fetches go through one place
 
 #### 1.5.2 `feat(frontend): health check status component`
-- [ ] 🔴 `test_shows_connected` — mock fetch returning ok, assert "connected" shown
-- [ ] 🔴 `test_shows_disconnected` — mock fetch failing, assert "disconnected" shown
-- [ ] 🟢 Create `HealthStatus` component that fetches `/health` and shows status
-- [ ] 🔵 Extract `useHealthCheck()` hook so fetching is separate from rendering
+- [x] 🔴 `test_shows_connected` — mock fetch returning ok, assert "connected" shown
+- [x] 🔴 `test_shows_disconnected` — mock fetch failing, assert "disconnected" shown
+- [x] 🟢 Create `HealthStatus` component that fetches `/health` and shows status
+- [x] 🔵 Extract `useHealthCheck()` hook so fetching is separate from rendering
 
 ---
 
