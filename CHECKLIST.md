@@ -81,9 +81,16 @@ Each commit follows **Red → Green → Refactor** TDD:
 
 ### 1.5 `feat(frontend): connect to backend health check`
 
-- [ ] 🔴 Write test: component shows "connected" when API returns ok, "disconnected" on error
-- [ ] 🟢 Add API base URL env var, fetch `/health` on load, show status
-- [ ] 🔵 Extract API client helper so all future fetches go through one place
+#### 1.5.1 `chore(frontend): add API client helper`
+- [x] 🔴 N/A — structural only
+- [x] 🟢 Create `src/lib/api.ts` with base URL from `VITE_API_URL` env var
+- [x] 🔵 Ensure all future fetches go through one place
+
+#### 1.5.2 `feat(frontend): health check status component`
+- [x] 🔴 `test_shows_connected` — mock fetch returning ok, assert "connected" shown
+- [x] 🔴 `test_shows_disconnected` — mock fetch failing, assert "disconnected" shown
+- [x] 🟢 Create `HealthStatus` component that fetches `/health` and shows status
+- [x] 🔵 Extract `useHealthCheck()` hook so fetching is separate from rendering
 
 ---
 
